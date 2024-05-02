@@ -2,13 +2,13 @@
 //  Import LIBRARIES
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-//  Import FIILES
+//  Import FILES
 //  PARTS
 //  PROVIDERS
 //  //   ///
 
-class CategoryScreen extends StatelessWidget {
-  const CategoryScreen({super.key});
+class CategoriesScreen extends StatelessWidget {
+  const CategoriesScreen({super.key});
 
   @override
   Widget build(BuildContext context) {

@@ -2,8 +2,8 @@
 //  Import LIBRARIES
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-//  Import FIILES
-import 'features/screens/category_screen.dart';
+//  Import FILES
+import 'features/screens/categories_screen.dart';
 //  PARTS
 //  PROVIDERS
 //  //   ///
@@ -27,7 +27,7 @@ class MyApp extends StatelessWidget {
         textTheme: GoogleFonts.latoTextTheme(),
         useMaterial3: true,
       ),
-      home: const CategoryScreen(),
+      home: const CategoriesScreen(),
     );
   }
 }
@@ -38,7 +38,7 @@ class MyApp extends StatelessWidget {
 
 //  //   ///
 //  Import LIBRARIES
-//  Import FIILES
+//  Import FILES
 //  PARTS
 //  PROVIDERS
 //  //   ///
