@@ -25,7 +25,7 @@ const availableCategories = [
   ),
   Category(
     id: 'c4',
-    title: 'German',
+    title: 'Romagnolo',
     color: Colors.amber,
   ),
   Category(
@@ -35,7 +35,7 @@ const availableCategories = [
   ),
   Category(
     id: 'c6',
-    title: 'Exotic',
+    title: 'Indian',
     color: Colors.green,
   ),
   Category(
@@ -45,7 +45,7 @@ const availableCategories = [
   ),
   Category(
     id: 'c8',
-    title: 'Asian',
+    title: 'Chinese',
     color: Colors.lightGreen,
   ),
   Category(
