@@ -3,6 +3,7 @@
 import 'package:flutter/material.dart';
 //  Import FILES
 import '../../models/meal.dart';
+import '../../widgets/meal_item.dart';
 //  PARTS
 //  PROVIDERS
 //  //   ///
@@ -42,7 +43,8 @@ class MealsScreen extends StatelessWidget {
       content = ListView.builder(
         itemCount: meals.length,
         itemBuilder: (context, index) {
-          return Text(meals[index].title);
+          // return Text(meals[index].title);
+          return MealItem(meal: meals[index]);
         },
       );
     }
