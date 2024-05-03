@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 //  Import FILES
 import '../../models/meal.dart';
 import '../../widgets/meal_item.dart';
+import 'meal_details_screen.dart';
 //  PARTS
 //  PROVIDERS
 //  //   ///
@@ -14,6 +15,14 @@ class MealsScreen extends StatelessWidget {
 
   const MealsScreen({super.key, required this.title, required this.meals});
 
+  void selectMeal(BuildContext context, Meal meal) {
+    Navigator.of(context).push(
+      MaterialPageRoute(
+        builder: (ctx) => MealDetailsScreen(meal: meal),
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     Widget content = Center(
@@ -21,7 +30,7 @@ class MealsScreen extends StatelessWidget {
         mainAxisSize: MainAxisSize.min,
         children: <Widget>[
           Text(
-            'Sorry,\nno meals for this seclection.',
+            'Sorry,\n   no meals for this seclection.',
             style: Theme.of(context)
                 .textTheme
                 .headlineLarge!
@@ -44,7 +53,12 @@ class MealsScreen extends StatelessWidget {
         itemCount: meals.length,
         itemBuilder: (context, index) {
           // return Text(meals[index].title);
-          return MealItem(meal: meals[index]);
+          return MealItem(
+            meal: meals[index],
+            onSelectMeal: (BuildContext context, meal) {
+              selectMeal(context, meal);
+            },
+          );
         },
       );
     }
