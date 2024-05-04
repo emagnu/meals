@@ -3,6 +3,7 @@
 import 'package:flutter/material.dart';
 //  Import FILES
 import '../../models/meal.dart';
+import '../../widgets/main_drawer.dart';
 import 'categories_screen.dart';
 import 'meals_screen.dart';
 //  PARTS
@@ -71,6 +72,7 @@ class _TabsScreenState extends State<TabsScreen> {
         // title: const Text('dynamic ...'),
         title: Text(activePageTitle),
       ),
+      drawer: const MainDrawer(), //const Drawer(),
       body: activePage,
       bottomNavigationBar: BottomNavigationBar(
         onTap: _selectPage, //(index) {debugPrint('index: $index');},
