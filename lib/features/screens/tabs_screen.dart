@@ -51,6 +51,14 @@ class _TabsScreenState extends State<TabsScreen> {
     });
   }
 
+  void _setScreen(String identifier) {
+    if (identifier == 'filters') {
+      // Navigator.of(context).pushReplacementNamed('/filters',);
+    } else {
+      Navigator.of(context).pop();
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     String activePageTitle = 'Categories';
@@ -72,7 +80,9 @@ class _TabsScreenState extends State<TabsScreen> {
         // title: const Text('dynamic ...'),
         title: Text(activePageTitle),
       ),
-      drawer: const MainDrawer(), //const Drawer(),
+      drawer: MainDrawer(
+        onSelectScreen: _setScreen,
+      ), //const Drawer(),
       body: activePage,
       bottomNavigationBar: BottomNavigationBar(
         onTap: _selectPage, //(index) {debugPrint('index: $index');},
